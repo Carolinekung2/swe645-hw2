@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px; color: #006633}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-yellow {background-color: #FFCC33}
+.w3-border-green {border-color: #006633; border-width: 5px; box-shadow: 5px 5px}
+</style>
+</head>
+<body style="background-color: #FAC3E6">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-panel w3-border w3-border-green w3-center w3-opacity" style="padding:128px 16px">
+  <h1>Campus visit survey</h1>
+  <h1 class="w3-xlarge">Provide feedback on your campus visit.</h1>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-panel w3-border w3-yellow">
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="csInfo.html" class="w3-bar-item w3-button w3-light-grey">CS Info</a>
+      <a href="survey.html" class="w3-bar-item w3-button">Survey</a>
+    </div>
+  </div>
+</header>
+
+<!-- Form -->
+<form autocomplete="on">
+    <p>Fields marked with * are required</p>
+    <p>Contact info:</p>
+    <label for="fname">*First name:</label>
+    <input type="text" id="fname" name="fname" placeholder="i.e. Caroline" required autofocus><br><br>
+    <label for="lname">*Last name:</label>
+    <input type="text" id="lname" name="lname" placeholder="i.e. Kung" required><br><br>
+    <label for="address">Street address:</label>
+    <input type="text" id="address" name="address" placeholder="i.e. S Hayes St"><br><br>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="e.g. Alexandria"><br><br>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state"><br><br>
+    <label for="zip">Zip:</label>
+    <input type="number" id="zip" name="zip"><br><br>
+    <label for="pnumber">Phone number:</label>
+    <input type="tel" id="pnumber" name="pnumber"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url" placeholder="http://url.com"><br><br>
+    <label for="date">Date of survey:</label>
+    <input type="date" id="date" name="date"><br><br>
+
+    <p>Favorite part of campus:</p>
+    <input type="checkbox" id="fave1" name="fave1" value="students">
+    <label for="fave1"> Students</label><br>
+    <input type="checkbox" id="fave2" name="fave2" value="location">
+    <label for="fave2"> Location</label><br>
+    <input type="checkbox" id="fave3" name="fave3" value="campus">
+    <label for="fave3"> Campus</label><br>
+    <input type="checkbox" id="fave4" name="fave4" value="atmosphere">
+    <label for="fave4"> Atmosphere</label><br>
+    <input type="checkbox" id="fave5" name="fave5" value="dormRooms">
+    <label for="fave5"> Dorm rooms</label><br>
+    <input type="checkbox" id="fave6" name="fave6" value="sports">
+    <label for="fave6"> Sports</label><br><br>
+
+    <p>How did you become interested in GMU?</p>
+    <input type="radio" id="friends" name="interest" value="friends">
+    <label for="friends">Friends</label><br>
+    <input type="radio" id="television" name="interest" value="television">
+    <label for="television">Television</label><br>
+    <input type="radio" id="internet" name="interest" value="internet">
+    <label for="internet">Internet</label><br>
+    <input type="radio" id="other" name="interest" value="other">
+    <label for="other">Other</label><br><br>
+
+    <p>Raffle: Enter at least 10 comma separated numbers 1-100.</p>
+    <textarea name="comments" rows="10" cols="30" placeholder="e.g. 1,2,3,4,5,6,7,8,9,10"></textarea>
+    <br>
+
+    <p>Additional comments:</p>
+    <textarea name="comments" rows="10" cols="30"></textarea>
+    <br>
+
+    <p>*Highschool graduation month:</p>
+    <input list="months" name="gradMonth" required>
+    <datalist id="months">
+        <option value="January">
+        <option value="February">
+        <option value="March">
+        <option value="April">
+        <option value="May">
+        <option value="June">
+        <option value="July">
+        <option value="August">
+        <option value="September">
+        <option value="October">
+        <option value="November">
+        <option value="December">
+    </datalist><br>
+    <label for="year">*Graduation year:</label><br>
+    <input type="number" id="year" name="year" required><br>
+
+    <p>*How likely are you to recommend this school to others?:</p>
+    <input list="likeliness" name="recommendation" required>
+    <datalist id="likeliness">
+        <option value="Very likely">
+        <option value="Likely">
+        <option value="Unlikely">
+    </datalist><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+</form>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
