@@ -1,14 +1,23 @@
-# use the official Nginx image as the base image
+# Dockerfile
+# Authors: Caroline Kung, Cynthia Kirupakaran
+# Course: SWE645 - Software Engineering for the Web
+# Purpose: Containerizes the SWE645 web application (homepage + survey) using nginx.
+#          The built image is pushed to Docker Hub and deployed to Kubernetes for Assignment 2.
+
+# Use the official Nginx image as the base image
 FROM nginx:alpine
 
-# remove the default Nginx static content
+# Remove the default Nginx placeholder content
 RUN rm -rf /usr/share/nginx/html/*
 
-# copies your custom index.html file from your local directory into the container's Nginx web root directory
-COPY index.html carolineHeadshot.jpg /usr/share/nginx/html/
+# Copy all web application files into the nginx html directory
+COPY index.html /usr/share/nginx/html/
+COPY survey.html /usr/share/nginx/html/
+COPY csInfo.html /usr/share/nginx/html/
+COPY carolineHeadshot.jpg /usr/share/nginx/html/
 
-# Exposes port 80 for the HTTP server
+# Expose port 80 for HTTP traffic
 EXPOSE 80
 
-# Runs the Nginx server and ensures it doesn’t run as a background process.
+# Start nginx in the foreground (required for Docker containers)
 CMD ["nginx", "-g", "daemon off;"]

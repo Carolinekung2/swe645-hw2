@@ -1,0 +1,29 @@
+# deployment.yaml
+# Authors: Caroline Kung, Cynthia Kirupakaran
+# Course: SWE645 - Software Engineering for the Web
+# Purpose: Kubernetes Deployment manifest for the SWE645 web application.
+#          Maintains 3 pod replicas at all times for resiliency. If a pod is deleted,
+#          Kubernetes automatically creates a replacement (self-healing).
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-deployment
+  labels:
+    app: swe645-webapp
+spec:
+  replicas: 3                        # 3 pods always running (required by assignment)
+  selector:
+    matchLabels:
+      app: swe645-webapp
+  template:
+    metadata:
+      labels:
+        app: swe645-webapp
+    spec:
+      containers:
+        - name: swe645-webapp
+          image: ckirupak/swe645-webapp:latest
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always                           # Always pull latest image on redeploy
