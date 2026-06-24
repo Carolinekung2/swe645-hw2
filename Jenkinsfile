@@ -1,8 +1,7 @@
 // Jenkinsfile
 // Authors: Caroline Kung, Cynthia Kirupakaran
 // Course: SWE645 - Software Engineering for the Web
-// Purpose: CI/CD pipeline for SWE645 Assignment 2. Automatically triggered when code is
-//          pushed to GitHub. Builds a Docker image, pushes it to Docker Hub, and redeploys
+// Purpose: CI/CD pipeline for SWE645 Assignment 2. Builds a Docker image, pushes it to Docker Hub, and redeploys
 //          the application on a Kubernetes cluster using kubectl.
 
 pipeline {

@@ -3,7 +3,7 @@
 # Course: SWE645 - Software Engineering for the Web
 # Purpose: Kubernetes Deployment manifest for the SWE645 web application.
 #          Maintains 3 pod replicas at all times for resiliency. If a pod is deleted,
-#          Kubernetes automatically creates a replacement (self-healing).
+#          Kubernetes automatically creates a replacement.
 
 apiVersion: apps/v1
 kind: Deployment
@@ -12,7 +12,7 @@ metadata:
   labels:
     app: swe645-webapp
 spec:
-  replicas: 3                        # 3 pods always running (required by assignment)
+  replicas: 3                        # 3 pods always running 
   selector:
     matchLabels:
       app: swe645-webapp
