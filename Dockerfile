@@ -10,11 +10,8 @@ FROM nginx:alpine
 # default Nginx placeholder content removed
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy all web application files into the nginx html directory
-COPY index.html /usr/share/nginx/html/
-COPY survey.html /usr/share/nginx/html/
-COPY csInfo.html /usr/share/nginx/html/
-COPY carolineHeadshot.jpg /usr/share/nginx/html/
+# copies your custom index.html file from your local directory into the container's Nginx web root directory
+COPY ./ /usr/share/nginx/html/
 
 # Expose port 80 for HTTP traffic
 EXPOSE 80
