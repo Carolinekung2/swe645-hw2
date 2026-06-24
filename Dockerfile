@@ -5,7 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # copies your custom index.html file from your local directory into the container's Nginx web root directory
-COPY index.html carolineHeadshot.jpg /usr/share/nginx/html/
+COPY ./ /usr/share/nginx/html/
 
 # Exposes port 80 for the HTTP server
 EXPOSE 80
