@@ -8,7 +8,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'ckirupak/swe645-webapp'
+        DOCKER_IMAGE = 'carolinekung2/static-web-app'
         DOCKER_TAG   = 'latest'
     }
 

@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: swe645-webapp
-          image: ckirupak/swe645-webapp:latest
+          image: carolinekung2/static-web-app:latest
           ports:
             - containerPort: 80
           imagePullPolicy: Always                           # Always pull latest image on redeploy
