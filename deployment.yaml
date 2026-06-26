@@ -8,22 +8,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swe645-deployment
-  labels:
-    app: swe645-webapp
-spec:
-  replicas: 3                        # 3 pods always running 
-  selector:
-    matchLabels:
-      app: swe645-webapp
-  template:
-    metadata:
-      labels:
+    name: swe645-deployment
+    labels:
         app: swe645-webapp
-    spec:
-      containers:
-        - name: swe645-webapp
-          image: ckirupak/swe645-webapp:latest
-          ports:
-            - containerPort: 80
-          imagePullPolicy: Always                           # Always pull latest image on redeploy
+spec:
+    replicas: 3 # 3 pods always running
+    selector:
+        matchLabels:
+            app: swe645-webapp
+    template:
+        metadata:
+            labels:
+                app: swe645-webapp
+        spec:
+            containers:
+                - name: swe645-webapp
+                  image: carolinekung2/static-web-appp:latest
+                  ports:
+                      - containerPort: 80
+                  imagePullPolicy: Always # Always pull latest image on redeploy
