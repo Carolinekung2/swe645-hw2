@@ -1,9 +1,8 @@
-HW 1 and Project 1: Front-end of website
-Course: SWE 645 and SWE 642
-Name: Caroline Kung
-Gnum: ckung4
-Date: 06/02/26 (SWE 645) and 05/30/26 (SWE 642)
+HW 2: Containerized Static Web App
+Course: SWE 645 - Software Engineering for the Web (Dev Ops)
+Names: Caroline Kung and Cynthia Kirupakaran
+Gnums: ckung4 and ckirupak
+Submitted: 06/26/26
 
-S3 Website endpoint: http://project1-caroline-kung.s3-website.us-east-2.amazonaws.com/index.html
-EC2 Website IP address: http://18.226.64.154/index.html
-
+Github repo: https://github.com/Carolinekung2/swe645-hw2
+EC2 Website IP address: http://ec2-100-29-137-115.compute-1.amazonaws.com:30080/
